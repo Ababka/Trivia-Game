@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +12,7 @@ body {
 
 header {
     background-color: #850B96;
-    width: auto;
+    width: 1500px; /* cant get content to auto to page width*/
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -31,24 +34,39 @@ header {
     color: #38B8E6;
 }
 
-/* div containing the game */
-#container {
+body {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
 
-/* div of buttons for the game */
-#container div{
+/* div containing the game */
+#body {
     background-color: #850B96;
     margin-top: 40px;
-    padding: 40px;
+    padding: 20px;
     width: 800px;
     height: 460px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: end;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* div for question image */
+#question {
+    background-color: #46194D;
+    width: 720px;
+    height: 360px;
+}
+
+/* div of buttons for the game */
+#choose {
+    display: flex;
+    flex-direction: row;
 }
 
 /* answer buttons */
@@ -68,5 +86,6 @@ header {
     font-weight: bold;
     color: #38B8E6;
     font-size: 20px;
+    width: 300px;
     text-align: center;
 }
