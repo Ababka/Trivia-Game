@@ -27,18 +27,46 @@ header {
 #leadIn {
     font-family: "Cinzel";
     font-weight: bold;
+    font-size: 25px;
     color: #38B8E6;
 }
 
-#quiz {
+/* div containing the game */
+#container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#quiz div {
+/* div of buttons for the game */
+#container div{
     background-color: #850B96;
-    margin-top: 60px;
+    margin-top: 40px;
+    padding: 40px;
     width: 800px;
-    height: 475px;
+    height: 460px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: end;
+}
+
+/* answer buttons */
+#left, #right {
+    background-color: #46194D;
+    color: #38B8E6;
+    font-family: "Cinzel";
+    font-weight: bold;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+}
+
+/* text between buttons */
+#choose p {
+    font-family: "Cinzel";
+    font-weight: bold;
+    color: #38B8E6;
+    font-size: 20px;
+    text-align: center;
 }
