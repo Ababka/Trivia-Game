@@ -12,7 +12,7 @@ body {
 
 header {
     background-color: #850B96;
-    width: 1500px; /* cant get content to auto to page width*/
+    width: 100%;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -54,6 +54,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px;
 }
 
 /* div for question image */
@@ -69,8 +71,18 @@ body {
     flex-direction: row;
 }
 
-/* answer buttons */
-#left, #right {
+/* text between buttons */
+#choose p {
+    font-family: "Cinzel";
+    font-weight: bold;
+    color: #38B8E6;
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* answer buttons */ /*could make one class to clean up*/
+#begin, #left, #right, #next {
     background-color: #46194D;
     color: #38B8E6;
     font-family: "Cinzel";
@@ -80,12 +92,7 @@ body {
     height: 50px;
 }
 
-/* text between buttons */
-#choose p {
-    font-family: "Cinzel";
-    font-weight: bold;
-    color: #38B8E6;
-    font-size: 20px;
-    width: 300px;
-    text-align: center;
+/* add a hover effect over buttons before click, may need to add class*/
+:hover {
+
 }
