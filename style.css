@@ -82,7 +82,7 @@ body {
 }
 
 /* answer buttons */ /*could make one class to clean up*/
-#begin, #left, #right, #next {
+#left, #right, #next {
     background-color: #46194D;
     color: #38B8E6;
     font-family: "Cinzel";
