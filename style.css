@@ -92,7 +92,9 @@ body {
     height: 50px;
 }
 
-/* add a hover effect over buttons before click, may need to add class*/
-:hover {
-
-}
+/* hover effect over buttons before clicked*/
+#left:hover, #right:hover {
+    transition: 1s;
+    background: #8A56F5;
+    transition: 1s;
+    }
