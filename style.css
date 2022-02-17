@@ -114,7 +114,7 @@ body {
 }
 
 /*size of an IPhone*/
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
     #title {
         font-size: 45px;
     }
