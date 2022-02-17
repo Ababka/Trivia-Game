@@ -98,3 +98,18 @@ body {
     background: #8A56F5;
     transition: 1s;
     }
+
+/*button for part 2*/
+.next {
+    font-family: Cinzel;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+    background-color: #46194D;
+    color: #38B8E6;
+    border-radius: 2px;
+    box-shadow: 0 0 15px;
+}
