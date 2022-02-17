@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #3257E3;
+    background-color: #410094;
 }
 
 header {
@@ -17,7 +17,6 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 
 #title {
@@ -82,7 +81,7 @@ body {
 }
 
 /* answer buttons */ /*could make one class to clean up*/
-#left, #right, #next {
+#left, #right {
     background-color: #46194D;
     color: #38B8E6;
     font-family: "Cinzel";
@@ -112,4 +111,34 @@ body {
     color: #38B8E6;
     border-radius: 2px;
     box-shadow: 0 0 15px;
+}
+
+/*size of an IPhone*/
+@media screen and (max-width: 400px) {
+    #title {
+        font-size: 45px;
+    }
+
+    #leadIn {
+        font-size: 20px;
+    }
+
+    #body {
+        width: 350px;
+    }
+
+    img {
+        width: 100%;
+        height: inherit;
+    }
+
+    #choose {
+        width: 250px;
+    }
+
+    #left, #right {
+        font-size: 20px;
+        width: 175px;
+        height: 50px;
+    }
 }
