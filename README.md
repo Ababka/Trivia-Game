@@ -1,6 +1,8 @@
 # Trivia-Game
 Milestone Project 1: Browser Game
 
+https://ababka.github.io/Trivia-Game/
+
 <><>game requirments<><>
 -playable (solo, PvP, PvE)
 -winnable/scorable
