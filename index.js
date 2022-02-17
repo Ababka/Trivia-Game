@@ -6,7 +6,7 @@ const falseButton = document.getElementById("right")
 // const name = promt ("Enter a username!")
 var score = 0
 var index = 0
-var i = 0
+var i = 0 //v2
 var myQuestions = [{
     question: "", //index 0
     answers: {
@@ -117,7 +117,7 @@ falseButton.addEventListener("click", function(){
     }
 })
 
-//styling for "Your Score is X out of 4"
+//styling for "Your Score is X out of 10"
 document.getElementById("question").style.cssText = ` 
     display: flex;
     flex-direction: column;
