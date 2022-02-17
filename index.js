@@ -3,38 +3,40 @@
 const questionContainer = document.getElementById("question")
 const trueButton = document.getElementById("left")
 const falseButton = document.getElementById("right")
+
 // const name = promt ("Enter a username!")
 var score = 0
 var index = 0
 var myQuestions = [{
-    question: "Test Question 1",
+    question: "", //index 0
     answers: {
         left: "True",
         right: "False"
         },
     correctAnswer: "right", //false
     },{
-    question: "Test Question 2",
+    question: "", //index 1
     answers: {
         left: "True",
         right: "False"
         },
     correctAnswer: "left" //true
     },{
-    question: "Test Question 2",
+    question: "",//index 2
     answers: {
         left: "True",
         right: "False"
         },
     correctAnswer: "right", //false
     },{
-    question: "Test Question 2",
+    question: "", //index 3
     answers: {
         left: "True",
         right: "False"
         },
     correctAnswer: "right", //false
 }]
+
 
 trueButton.addEventListener("click", function(){
     var correctAnswer = "left"
@@ -43,7 +45,10 @@ trueButton.addEventListener("click", function(){
     }
     index++
     questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
-    console.log(score)
+    
+    if(index === 4){ //change numer to 1+ number of questions
+        questionContainer.innerHTML=`Your Score is <br> ${score} out of 4`
+    }
 })
 
 falseButton.addEventListener("click", function(){
@@ -53,8 +58,25 @@ falseButton.addEventListener("click", function(){
     }
     index++
     questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
-    console.log(score)
+    
+    if(index === 4){ //change numer to 1+ number of questions
+        questionContainer.innerHTML=`Your Score is <br> ${score} out of 4`
+    }
 })
 
+//styling for "Your Score is X out of 4"
+document.getElementById("question").style.cssText = ` 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Cinzel;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    color: #38B8E6;
+`
 
-//display score
+
+// document.getElementById("question").style
