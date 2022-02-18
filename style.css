@@ -81,6 +81,9 @@ header {
 /* answer buttons */ /*could make one class to clean up*/
 #left, #right {
     background-color: #46194D;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 0 10px;
     color: #38B8E6;
     font-family: "Cinzel";
     font-weight: bold;
@@ -93,12 +96,11 @@ header {
 #left:hover, #right:hover {
     transition: 1s;
     background: #8A56F5;
-    transition: 1s;
     }
 
 /*button for part 2*/
 .next {
-    font-family: Cinzel;
+    font-family: "Cinzel";
     font-weight: bold;
     font-size: 30px;
     text-align: center;
@@ -108,7 +110,7 @@ header {
     background-color: #46194D;
     color: #38B8E6;
     border-radius: 2px;
-    box-shadow: 0 0 15px;
+    box-shadow: 0 0 10px;
 }
 
 /*size of an IPhone*/ /*not responsive in real world */
