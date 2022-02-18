@@ -147,4 +147,9 @@ header {
         width: 175px;
         height: 50px;
     }
+
+    #left:hover, #right:hover {
+        transition: 0s;
+        background: #46194D;
+    }
 }
