@@ -36,3 +36,8 @@ developer.mozilla
 w3schools
 canva
 cosmopolitan.com/uk/worklife/a32612392/best-true-false-quiz-questions/
+
+
+                @@@ Future updates @@@
+Add answer pop up to selected question
+Add part 2 to the game
