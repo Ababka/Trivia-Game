@@ -106,7 +106,7 @@ falseButton.addEventListener("click", function(){
     index++
     questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
     
-    if(index === 10){ //change numer to 1+ number of index
+    if(index === 10){ //change numer to 1+ number of questions
         questionContainer.innerHTML=`Your Score is <br> ${score} out of 10`
         // v2 add to innerHTML after "out of X">  <br> <br> If you'd like to see how  you <br> compare to others click Next!
         var button = 
