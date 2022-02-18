@@ -113,7 +113,7 @@ body {
     box-shadow: 0 0 15px;
 }
 
-/*size of an IPhone*/
+/*size of an IPhone*/ /*not responsive in real world*/
 @media (max-width: 391px) {
     #title {
         font-size: 45px;
@@ -125,11 +125,16 @@ body {
 
     #body {
         width: 350px;
+        height: 300px;
+    }
+
+    #question {
+        height: 175px;
     }
 
     img {
         width: 100%;
-        height: inherit;
+        height:fit-content;
     }
 
     #choose {
