@@ -115,7 +115,7 @@ trueButton.addEventListener("click", function(){
         score++
     }
     index++
-    questionContainer.textContent=`<img src="Questions/test${index}.png" alt="Question ${index}">`
+    questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
     
     if(index === 10){ //change numer to 1+ number of questions
         questionContainer.innerHTML=`Your Score is <br> ${score} out of 10`
@@ -128,7 +128,7 @@ trueButton.addEventListener("click", function(){
         //questionContainer.appendChild(button)
         document.querySelector(".next").addEventListener("click", clickNextButton)
         if (mQuery.matches) {
-            //document.getElementById("question").style.height = "300px" //changes div to fit text
+            document.getElementById("question").style.height = "300px" //changes div to fit text
         }
     }
 })
@@ -140,7 +140,7 @@ falseButton.addEventListener("click", function(){
         score++
     }
     index++
-    questionContainer.textContent=`<img src="Questions/test${index}.png" alt="Question ${index}">`
+    questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
     
     if(index === 10){ //change numer to 1+ number of questions
         questionContainer.innerHTML=`Your Score is <br> ${score} out of 10`
@@ -153,7 +153,7 @@ falseButton.addEventListener("click", function(){
         //questionContainer.appendChild(button)
         document.querySelector(".next").addEventListener("click", clickNextButton)
         if (mQuery.matches) {
-            //document.getElementById("question").style.height = "300px" //changes div to fit text
+            document.getElementById("question").style.height = "300px" //changes div to fit text
         }
     }
 })
