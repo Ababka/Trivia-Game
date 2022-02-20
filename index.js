@@ -1,12 +1,41 @@
+const mQuery = window.matchMedia('(max-width: 430px)') //styling for phone
+if (mQuery.matches) {
+    console.log('Media query matched!')
+    document.getElementById("question").style.cssText = `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Cinzel;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #38B8E6;
+    `
+} else {
+
+    document.getElementById("question").style.cssText = ` 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Cinzel;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #38B8E6;
+    `
+}
+
 window.alert("⭐ Instructions Please read first! ⭐ \n Use your mouse to choose which answer you think is correct. \n After your selection you'll move to the next question. \n At the end you'll see your score! \n \n Good Luck! 🍀")
 
 const questionContainer = document.getElementById("question")
 const trueButton = document.getElementById("left")
 const falseButton = document.getElementById("right")
-// const name = promt ("Enter a username!")
+const choose = document.getElementById("choose")
+const words = ["Always", "Staying", "Take", "Me", "Down"]
 var score = 0
 var index = 0
-var i = 0 //v2
 var myQuestions = [{
     question: "", //index 0
     answers: {
@@ -79,61 +108,70 @@ var myQuestions = [{
     correctAnswer: "right", //false 37
 }]
 
+//if true button pressed do all this
 trueButton.addEventListener("click", function(){
     var correctAnswer = "left"
     if(correctAnswer === myQuestions[index].correctAnswer){
         score++
     }
     index++
-    questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
+    questionContainer.textContent=`<img src="Questions/test${index}.png" alt="Question ${index}">`
     
     if(index === 10){ //change numer to 1+ number of questions
         questionContainer.innerHTML=`Your Score is <br> ${score} out of 10`
-        // v2 add to innerHTML after "out of X">  <br> <br> If you'd like to see how  you <br> compare to others click Next!
-        var button = 
+        //add after "out of 10"> <br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!
+        choose.remove("choose")
+        const button =
         document.createElement("button")
-        button.innerHTML = "Next"
+        button.textContent = "Next"
         button.className = "next"
-        //questionContainer.appendChild(button); //add in v2
+        //questionContainer.appendChild(button)
+        document.querySelector(".next").addEventListener("click", clickNextButton)
+        if (mQuery.matches) {
+            //document.getElementById("question").style.height = "300px" //changes div to fit text
+        }
     }
 })
 
+//if false button pressed do all this
 falseButton.addEventListener("click", function(){
     var correctAnswer = "right"
     if(correctAnswer === myQuestions[index].correctAnswer){
         score++
     }
     index++
-    questionContainer.innerHTML=`<img src="Questions/test${index}.png" alt="Question ${index}">`
+    questionContainer.textContent=`<img src="Questions/test${index}.png" alt="Question ${index}">`
     
     if(index === 10){ //change numer to 1+ number of questions
         questionContainer.innerHTML=`Your Score is <br> ${score} out of 10`
-        // v2 add to innerHTML after "out of X">  <br> <br> If you'd like to see how  you <br> compare to others click Next!
-        var button = 
+        //add after "out of 10"> <br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!
+        choose.remove("choose")
+        const button =
         document.createElement("button")
-        button.innerHTML = "Next"
+        button.textContent = "Next"
         button.className = "next"
-        //questionContainer.appendChild(button); //add in v2
+        //questionContainer.appendChild(button)
+        document.querySelector(".next").addEventListener("click", clickNextButton)
+        if (mQuery.matches) {
+            //document.getElementById("question").style.height = "300px" //changes div to fit text
+        }
     }
 })
 
-//styling for "Your Score is X out of 10"
-document.getElementById("question").style.cssText = ` 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Cinzel;
-    text-align: center;
-    font-weight: bold;
-    font-size: 30px;
-    color: #38B8E6;
-`
-
-document.getElementsByName("button").style = `
-    justify-content: center;
-    align-items: center;
-`
+function clickNextButton(){
+    console.log('Part 2!')
+    question.remove("question")
+    setTimeout(function() {
+        window.alert("For this part put the Opposite of what the word listed!")
+    }, 50)
+    setTimeout(function() {
+        const div =
+        document.createElement("div")
+        div.className = "wordGuess"
+        div.innerHTML = words
+        container.appendChild(div)
+    }, 50)
+}
 
 //possible updates  - add prompt for user name, 
 //                  - store user score in internal storage
