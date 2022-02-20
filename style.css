@@ -38,16 +38,15 @@ header {
     color: #38B8E6;
 }
 
-
 /* div containing the game */
-#body {
+#container {
     background-color: #850B96;
     margin-top: 40px;
     padding: 20px;
     width: 800px;
     height: 460px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /*need to change to column*/
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -113,7 +112,17 @@ header {
     box-shadow: 0 0 10px;
 }
 
-/*size of an IPhone*/ /*not responsive in real world */
+.wordGuess {
+    /* justify-content: center; */
+    /* align-items: flex-start; */
+    /* text-align: center; */
+    font-family: "Cinzel";
+    font-weight: bold;
+    font-size: 40px;
+    color: #38B8E6;
+}
+
+/*size of an IPhone 13 pro max*/
 @media (max-width: 430px) {
     
     #title {
@@ -124,18 +133,19 @@ header {
         font-size: 20px;
     }
 
-    #body {
+    #container {
         width: 350px;
         height: 300px;
     }
 
     #question {
         height: 175px;
+        font-size: 10px;
     }
 
     img {
         width: 100%;
-        height:fit-content;
+        height: fit-content;
     }
 
     #choose {
@@ -151,5 +161,22 @@ header {
     #left:hover, #right:hover {
         transition: 0s;
         background: #46194D;
+    }
+
+    .next {
+        font-size: 20px;
+        width: 70px;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .wordGuess {
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* text-align: center; */
+        font-family: "Cinzel";
+        font-weight: bold;
+        font-size: 30px;
+        color: #38B8E6;
     }
 }
