@@ -34,7 +34,7 @@ const questionContainer = document.getElementById("question");
 const trueButton = document.getElementById("left");
 const falseButton = document.getElementById("right");
 const choose = document.getElementById("choose");
-const words = ["Always", "Staying", "Take", "Me", "Down"];
+
 let score = 0;
 let index = 0;
 let myQuestions = [
@@ -114,27 +114,23 @@ let fact = [
 ];
 
 //if true button pressed do all this
-trueButton.addEventListener("click", function () {
+trueButton.addEventListener("click", function() {
   let correctAnswer = "left";
   if (correctAnswer === myQuestions[index].correctAnswer) {
     score++;
 }
-console.log(fact[index]);
 window.alert(fact[index].theFact)
   index++;
-  //fact++;
   questionContainer.innerHTML = `<img src="Questions/test${index}.png" alt="Question ${index}">`;
 
-  if (index === 10) {
-    //change numer to 1+ number of questions
-    questionContainer.innerHTML = `Your Score is <br> ${score} out of 10`;
-    //add after "out of 10"> <br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!
+  if (index === 10) { //change numer to 1+ number of questions
+    questionContainer.innerHTML = `Your Score is <br> ${score} out of 10<br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!`;
     choose.remove("choose");
     const button = document.createElement("button");
     button.textContent = "Next";
     button.className = "next";
-    //questionContainer.appendChild(button)
-    //document.querySelector(".next").addEventListener("click", clickNextButton);
+    questionContainer.appendChild(button)
+    document.querySelector(".next").addEventListener("click", clickNextButton);
     if (mQuery.matches) {
       document.getElementById("question").style.height = "300px"; //changes div to fit text
     }
@@ -142,27 +138,23 @@ window.alert(fact[index].theFact)
 });
 
 //if false button pressed do all this
-falseButton.addEventListener("click", function () {
+falseButton.addEventListener("click", function() {
   let correctAnswer = "right";
   if (correctAnswer === myQuestions[index].correctAnswer) {
     score++;
 }
-console.log(fact[index]);
 window.alert(fact[index].theFact)
   index++;
-  //fact++;
   questionContainer.innerHTML = `<img src="Questions/test${index}.png" alt="Question ${index}">`;
 
-  if (index === 10) {
-    //change numer to 1+ number of questions
-    questionContainer.innerHTML = `Your Score is <br> ${score} out of 10`;
-    //add after "out of 10"> <br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!
+  if (index === 10) { //change numer to 1+ number of questions
+    questionContainer.innerHTML = `Your Score is <br> ${score} out of 10<br> <br> If you'd like to see how  you <br> compare to others <br> click Next for part 2!`;
     choose.remove("choose");
     const button = document.createElement("button");
     button.textContent = "Next";
     button.className = "next";
-    //questionContainer.appendChild(button)
-    //document.querySelector(".next").addEventListener("click", clickNextButton);
+    questionContainer.appendChild(button)
+    document.querySelector(".next").addEventListener("click", clickNextButton);
     if (mQuery.matches) {
       document.getElementById("question").style.height = "300px"; //changes div to fit text
     }
@@ -170,19 +162,39 @@ window.alert(fact[index].theFact)
 });
 
 function clickNextButton() {
-  console.log("Part 2!");
   question.remove("question");
-  setTimeout(function () {
+  setTimeout(function() {
     window.alert("For this part put the Opposite of what the word listed!");
   }, 50);
-  setTimeout(function () {
+  setTimeout(function() {
     const div = document.createElement("div");
     div.className = "wordGuess";
-    div.innerHTML = words;
+    div.innerHTML = `<tr>
+    <th>Always</th> <td><input type="" /></td>
+    <br>
+    <th>Staying</th> <td><input type="" /></td>
+    <br>
+    <th>Take</th> <td><input type="" /></td>
+    <br>
+    <th>Me</th> <td><input type="" /></td>
+    <br>
+    <th>Down</th> <td><input type="" /></td>
+    <br>
+    <td><button type="submit" id="wordGuessButton">Submit</button>
+    </td></tr>`;
     container.appendChild(div);
-  }, 50);
-}
+    document.querySelector("#wordGuessButton").addEventListener("click", clickSubmitButton);
+}, 50);
+};
+
+function clickSubmitButton(){
+    container.innerHTML = `<video controls autoplay id="results"><source src="Questions/testResults.mp4" type="video/mp4">Results</video>`;
+    if (mQuery.matches) {
+        document.getElementById("results").style.height = "220px"; //changes video to fit div
+    } else {
+        document.getElementById("results").style.height = "420px"; //changes video to fit div
+    }
+};
 
 //possible updates  - add prompt for user name,
 //                  - store user score in internal storage
-//                  - add second quiz promt "v2"

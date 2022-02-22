@@ -46,7 +46,7 @@ header {
     width: 800px;
     height: 460px;
     display: flex;
-    flex-direction: row; /*need to change to column*/
+    flex-direction: row; /*possibly need to change to column*/
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,7 @@ header {
 /* div of buttons for the game */
 #choose {
     display: flex;
-    flex-direction: row;
+    margin-top: 20px;
 }
 
 /* text between buttons */
@@ -113,13 +113,26 @@ header {
 }
 
 .wordGuess {
-    /* justify-content: center; */
-    /* align-items: flex-start; */
-    /* text-align: center; */
+    text-align: end;
     font-family: "Cinzel";
     font-weight: bold;
     font-size: 40px;
     color: #38B8E6;
+
+}
+
+#wordGuessButton {
+    font-family: "Cinzel";
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    width: 130px;
+    height: 60px;
+    margin-top: 30px;
+    background-color: #46194D;
+    color: #38B8E6;
+    border-radius: 2px;
+    box-shadow: 0 0 10px;
 }
 
 /*size of an IPhone 13 pro max*/
@@ -150,6 +163,7 @@ header {
 
     #choose {
         width: 250px;
+        margin-top: 10px;
     }
 
     #left, #right {
@@ -171,12 +185,17 @@ header {
     }
 
     .wordGuess {
-        /* justify-content: center; */
-        /* align-items: center; */
-        /* text-align: center; */
+        text-align: end;
         font-family: "Cinzel";
         font-weight: bold;
         font-size: 30px;
         color: #38B8E6;
+    }
+
+    #wordGuessButton {
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+        margin-top: 20px;
     }
 }
